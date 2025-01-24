@@ -10,12 +10,12 @@ load_dotenv()
 
 # AWS configurations
 region = "us-east-1"  # Replace with your preferred AWS region
-bucket_name = "sports-analytics-data-lake"  # Change to a unique S3 bucket name
-glue_database_name = "glue_nba_data_lake"
+bucket_name = "rodgers-sports-analytics-data-lake"  # Change to a unique S3 bucket name
+glue_database_name = "rodgers_glue_nba_data_lake"
 athena_output_location = f"s3://{bucket_name}/athena-results/"
 
 # Sportsdata.io configurations (loaded from .env)
-api_key = os.getenv("SPORTS_DATA_API_KEY")  # Get API key from .env
+api_key = os.getenv("NBA_API_KEY")  # Get API key from .env
 nba_endpoint = os.getenv("NBA_ENDPOINT")  # Get NBA endpoint from .env
 
 # Create AWS clients
